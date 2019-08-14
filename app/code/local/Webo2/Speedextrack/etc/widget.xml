@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* @category   Webo2
+* @package    Speedextrack
+* @author     Mits Xourikis
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<widgets>
+  <speedextrack_trackwidget type="speedextrack/trackwidget">
+    <name>Track Order</name>
+    <description type="desc">Track Order Link</description>
+</speedextrack_trackwidget>
+</widgets>

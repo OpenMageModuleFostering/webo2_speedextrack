@@ -1,0 +1,32 @@
+<?php
+			$order = $this->getTrackOrder();
+			$doc = new DOMdocument();
+			$doc->loadXML( $responsevalues );
+			$voustatuses = $doc->getElementsByTagName( "voustatus" );
+			$voustatus = $voustatuses->item(0)->nodeValue;
+			$voustatus_descrs = $doc->getElementsByTagName( "voustatus_descr" );
+			$voustatus_descr = $voustatus_descrs->item(0)->nodeValue;
+			$branches = $doc->getElementsByTagName( "branch" );
+			$branch = $branches->item(0)->nodeValue;
+			$comments = $doc->getElementsByTagName( "comments" );
+			$comment = $comments->item(0)->nodeValue;
+			$paralavons = $doc->getElementsByTagName( "paralavon" );
+			$paralavon = $paralavons->item(0)->nodeValue;
+			$dateparals = $doc->getElementsByTagName( "dateparal" );
+			$dateparal = $dateparals->item(0)->nodeValue;
+			echo "Status:\n" . htmlentities($voustatus) . "\n";
+			echo "Status Description:\n" . htmlentities($voustatus_descr) . "\n";
+			echo "Branch:\n" . htmlentities($branch) . "\n";
+			echo "Comment:\n" . htmlentities($comment) . "\n";
+			echo "Person:\n" . htmlentities($paralavon) . "\n";
+			echo "Date:\n" . htmlentities($dateparal) . "\n";
+			
+			//try tables
+			$stat = "\n" . htmlentities($voustatus) . "\n";
+			$descr = "\n" . htmlentities($voustatus_descr) . "\n";
+			$bran = "\n" . htmlentities($branch) . "\n";
+			$comme = "\n" . htmlentities($comment) . "\n";
+			$paral = "\n" . htmlentities($paralavon) . "\n";
+			$datpar = "\n" . htmlentities($dateparal) . "\n";
+?>
+

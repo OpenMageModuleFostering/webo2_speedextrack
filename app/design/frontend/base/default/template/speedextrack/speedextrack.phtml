@@ -1,0 +1,82 @@
+<style type="text/css">
+.main-container {min-height: 450px;}
+.dtrack-data-table  {border-collapse:collapse;border-spacing:0;}
+.dtrack-data-table td{font-family:Arial, sans-serif;font-size:14px;padding:15px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color: #E4D2D2;}
+.dtrack-data-table th{font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:15px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background-color: #3399cc;text-align: center;color: #fff;}
+</style>
+<?php
+    if(Mage::getStoreConfig('speedextrack/speedextrack_general/enabled')):
+    ?>
+    <img src="http://v2.readytogo.gr/media/wysiwyg/LOGONI.gif" alt="speedex-tracking" width="120" style="float: left;"><div class="page-title"><h1 style="padding-top: 10px;text-align: center;border: none;"><?php echo $this->__('Speedex tracking ') ?></h1></div>
+    <div class="form-list" style="padding-left: 35%;">
+        <form name="track_order" id="track_order" action="" method="post" onsubmit="sendAjax('track_order','<?php  echo Mage::getUrl('*/*/track');?>'); return false;">
+        <!--<form name="track_order" method="post" id="track_order" action="<?php echo Mage::getUrl('*/*/view');?>">-->
+            <ul class="form-list">
+                <li>
+                    <label for="trackcode_id" class="required"><em>*</em><?php echo $this->__('Tracking ID') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="trackcode_id" id="trackcode_id" value="" title="" class="input-text required-entry" />
+                    </div>    
+                </li>
+            </ul>
+            <div class="buttons-set">
+               <button type="submit" class="button" title="<?php echo $this->__('Track Order') ?>" name="track" id="track">
+                    <span><span><?php echo $this->__('Track Order') ?></span></span>
+                </button>
+            </div>
+
+        </form>
+        <div id="loading-details" class="loading-details" style="display:none">
+            <div id="loading-mask" >
+                <p class="loader" id="loading_mask_loader"><img src="<?php echo $this->getSkinUrl('speedextrack/images/ajax-loader-tr.gif') ?>" alt="<?php echo Mage::helper('adminhtml')->__('Loading...') ?>"/><br/><?php echo $this->__('Please wait...') ?></p>
+            </div>
+        </div>
+    </div> 
+
+
+
+    <div id="oderinfo" class="order-info-message"></div>
+
+
+
+    <script type="text/javascript">
+        var validateForm = new VarienForm('track_order', true);
+    </script>           
+    <script type="text/javascript">
+
+        function sendAjax(frmId,url){
+            if (!validateForm.validator.validate()) {
+                return;
+            }
+            var data = $(frmId).serialize(this);
+            $("loading-details").show();
+            
+      
+        new Ajax.Updater(
+                {
+                    success:"oderinfo"
+                },
+                
+                url,
+                {
+                    asynchronous:true,
+                    evalScripts:false,
+                    onComplete:function(request, json){
+                        $("loading-details").hide();
+                        return false;
+                    }, 
+                    onLoading:function(request, json){},
+                    parameters:data
+                }
+            ); 
+            return false;
+        }
+
+    </script>
+    <?php else: ?>
+    <?php
+        $url = Mage::getBaseUrl();
+        Mage::app()->getFrontController()->getResponse()->setRedirect($url);
+    ?>
+    <?php endif; ?>
+ 

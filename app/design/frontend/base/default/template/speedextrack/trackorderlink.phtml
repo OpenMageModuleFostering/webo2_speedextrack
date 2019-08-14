@@ -1,0 +1,15 @@
+
+<?php if (Mage::getStoreConfig('speedextrack/speedextrack_general/enabled') && Mage::getStoreConfig('speedextrack/speedextrack_general/topmenu')) { ?>
+    <div id="speedextrack_container" style="display: none">
+           <li class="level0 nav-3 last level-top">
+                <a href="<?php echo $this->getUrl('speedextrack') ?>">
+                    <span><?php echo $this->__('TrackOrder') ?></span></a>
+            </li>    
+    </div>
+<script type="text/javascript">
+            var menu = $('nav');
+            if (menu) {
+                menu.insert($('speedextrack_container').innerHTML);
+            }
+        </script>
+<?php } ?>

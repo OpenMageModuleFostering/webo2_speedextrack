@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>webo2_speedextrack</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Speedex Courier - Track &amp; Trace module makes easier for your customers to track their order's progress.</summary>
+    <description>Speedex Courier - Track &amp; Trace module makes easier for your customers to track their order's real-time progress.&#xD;
+&#xD;
+Fast and easy installation and configuration&#xD;
+No need to log in&#xD;
+Send track link via email (order confirmation &amp; shipment notification)</description>
+    <notes>Speedex Courier - Track &amp; Trace release</notes>
+    <authors><author><name>Webo2</name><user>Webo2</user><email>mitsxourikis@gmail.com</email></author></authors>
+    <date>2015-08-03</date>
+    <time>06:08:57</time>
+    <contents><target name="magelocal"><dir name="Webo2"><dir name="Speedextrack"><dir name="Block"><file name="Speedextrack.php" hash="623af300feb67149394dbfcae508191a"/><file name="Trackwidget.php" hash="acc662e6acd3a8e84c755833eac694af"/><file name="View.php" hash="42ff62ae94213d1776de885dc2690c24"/></dir><dir name="Helper"><file name="Data.php" hash="8e2feb11db2d1667d60d7f0ebf2f2bc5"/></dir><dir name="Model"><file name="Observer.php" hash="fece084e34e6b690eb5c1401082bd05a"/><dir name="System"><dir name="Config"><dir name="Frontend"><file name="Widgetsettings.php" hash="01e0b56b70253c7e8bdde36ac176c7cf"/></dir></dir></dir></dir><dir name="controllers"><file name="IndexController.php" hash="512807df1c7719398fe86f41cf8b4d13"/></dir><dir name="etc"><file name="config.xml" hash="40a83fa15245eccd752c2b473358ff60"/><file name="system.xml" hash="7e95941847d7ad97b83544a0e13e7566"/><file name="widget.xml" hash="2c4dc1aae4b34f4a4fe407eca95c95f5"/></dir><dir name="sql"><dir name="speedextrack_setup"><file name="mysql4-install-0.1.0.php" hash="47c62d342c96c4628c2da5c2e3dafacf"/><file name="mysql4-upgrade-0.1.0-0.1.1.php" hash="a8c712a7128d8350c4e238c44d49d47b"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="speedextrack"><file name="info.phtml" hash="5d1c1a5edf9de1a3692ad1d66508d280"/><dir name="order"><file name="items.phtml" hash="4b4da74f29e06b7bfa904cf202ff0268"/></dir><dir name="shipment"><file name="items.phtml" hash="25c1dd57c7c7f6439fc96182a58bb011"/></dir><file name="speedextrack.phtml" hash="7f9e9246c95b80b363db537198f363b2"/><file name="trackdetail.phtml" hash="2950dabe514b50f5769665ef8785c97b"/><file name="trackorderlink.phtml" hash="5319fab1284da222dba4bbf110039819"/><file name="trackwidget.phtml" hash="37ca8ce45b5fe8393826f9eb5743e6b4"/><file name="view.phtml" hash="71f72f80ecf948a65cba97cbd7ce7e26"/></dir></dir><dir name="layout"><file name="speedextrack.xml" hash="92c0618c64a10c6c2a2ec45a022a37c9"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webo2_Speedextrack.xml" hash="7b9ac2b5e9fe69427c9e98f1698e4a9c"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Webo2_Speedextrack.csv" hash="f3105f62e2546f58a27b2b88e588828a"/></dir><dir name="el_GR"><file name="Webo2_Speedextrack.csv" hash=""/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="speedextrack"><dir name="css"><file name="speedextrack.css" hash="9bfecdaa1cf87a42f67f642dc865bea6"/></dir><dir name="images"><file name="ajax-loader-tr.gif" hash="1ae32bc8232ff2527c627e5b38eb319a"/><file name="ajax-loader.gif" hash="57ca1a2085d82f0574e3ef740b9a5ead"/><file name="i-trackorder.png" hash="65f5d4dbeafa21878e487859e29b0453"/><file name="main-bg.png" hash="615e539beac7fc4ad7b6aa7e519ca2ee"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
