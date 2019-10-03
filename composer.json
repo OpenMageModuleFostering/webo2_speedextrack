@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/webo2_speedextrack",
+    "name": "openmage-module-fostering\/webo2_speedextrack",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Speedex Courier - Track & Trace module makes easier for your customers to track their order's progress.",
     "authors": [
